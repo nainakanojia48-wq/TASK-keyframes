@@ -1,0 +1,48 @@
+.orbit-box{
+  width: 300px;
+  height: 300px;
+  margin: 100px auto;
+  position: relative;
+}
+
+/* IMAGE */
+.orbit-img{
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  
+  animation: smoothOrbit 2s linear infinite;
+}
+
+/* KEYFRAMES */
+@keyframes smoothOrbit {
+
+  /* 🔹 START (SQUEEZE) */
+  0%{
+    transform: translate(-50%, -50%) scale(0.2, 1.2);
+  }
+
+  /* 🔹 MOVE RIGHT-UP */
+  25%{
+    transform: translate(-40%, -60%) scale(1);
+  }
+
+  /* 🔹 MOVE LEFT-UP */
+  50%{
+    transform: translate(-60%, -60%);
+  }
+
+  /* 🔹 MOVE LEFT-DOWN */
+  75%{
+    transform: translate(-60%, -40%);
+  }
+
+  /* 🔹 BACK TO CENTER */
+  100%{
+    transform: translate(-50%, -50%);
+  }
+}
+        
